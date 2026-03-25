@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy Birthday 💖</title>
+<title>Happy Birthday Mayuri 💖</title>
 
 <style>
     body {
         margin: 0;
-        padding: 0;
-        font-family: 'Arial', sans-serif;
+        font-family: Arial, sans-serif;
         text-align: center;
         background: linear-gradient(to right, #ff9a9e, #fad0c4);
         overflow: hidden;
@@ -17,33 +16,34 @@
     h1 {
         font-size: 50px;
         color: white;
-        margin-top: 50px;
+        margin-top: 40px;
         animation: glow 2s infinite alternate;
     }
 
     @keyframes glow {
         from { text-shadow: 0 0 10px #fff; }
-        to { text-shadow: 0 0 20px #ff4da6; }
+        to { text-shadow: 0 0 25px #ff4da6; }
     }
 
     .card {
         background: white;
         padding: 25px;
-        margin: 40px auto;
+        margin: 30px auto;
         width: 350px;
         border-radius: 20px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    img {
+        width: 220px;
+        border-radius: 15px;
+        margin: 15px 0;
+        border: 3px solid #ff4da6;
     }
 
     p {
         font-size: 18px;
         color: #333;
-    }
-
-    img {
-        width: 250px;
-        border-radius: 15px;
-        margin: 15px 0;
     }
 
     button {
@@ -60,13 +60,29 @@
         background: #e60073;
     }
 
-    /* Balloon animation */
+    /* typing effect */
+    .typing {
+        font-size: 18px;
+        color: #444;
+        border-right: 2px solid black;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: auto;
+        animation: typing 4s steps(40, end) forwards;
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    /* balloons */
     .balloon {
         position: absolute;
         bottom: -100px;
         width: 50px;
         height: 70px;
-        background: red;
         border-radius: 50%;
         animation: float 6s infinite;
     }
@@ -80,38 +96,45 @@
 
 <body>
 
-<h1>🎉 Happy Birthday 💖</h1>
+<h1>🎉 Happy Birthday Maiiiii😘😘😘😘😘😘😘😘😘 💖</h1>
 
 <div class="card">
-    <img src="https://i.imgur.com/3ZQ3Z4T.png" alt="Cake">
 
-    <p>Dear <b>[Her Name]</b>,</p>
+    <!-- 👉 Put her image here -->
+    <img src="her.jpg" alt="Mayuri">
+
+    <p><b>Dear Mayuri,</b></p>
+
+    <p class="typing">
+        Wishing you endless happiness, love, and success 💕
+    </p>
 
     <p>
-        Wishing you a day filled with happiness, laughter, and lots of love 💕  
-        You are truly special and I’m lucky to have you in my life 🌸
+        You are truly special and make life more beautiful 🌸  
+        I hope your day is filled with smiles and surprises 🎁
     </p>
 
     <button onclick="showMessage()">Click for Surprise 🎁</button>
+
 </div>
 
 <audio autoplay loop>
-    <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid" type="audio/mpeg">
+    <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid">
 </audio>
 
 <script>
 function showMessage() {
-    alert("💖 Once again Happy Birthday! Stay happy always 😊");
+    alert("💖 Happy Birthday Maiiiiiiiii! Stay happy always 😊....Love u alottttttttt😘😘😘😘😘😘😘😘😘");
 }
 
-// create balloons
-for (let i = 0; i < 10; i++) {
-    let balloon = document.createElement("div");
-    balloon.className = "balloon";
-    balloon.style.left = Math.random() * 100 + "vw";
-    balloon.style.background = ["red","blue","yellow","pink","purple"][Math.floor(Math.random()*5)];
-    balloon.style.animationDuration = (4 + Math.random() * 4) + "s";
-    document.body.appendChild(balloon);
+// balloons
+for (let i = 0; i < 12; i++) {
+    let b = document.createElement("div");
+    b.className = "balloon";
+    b.style.left = Math.random() * 100 + "vw";
+    b.style.background = ["red","blue","yellow","pink","purple"][Math.floor(Math.random()*5)];
+    b.style.animationDuration = (4 + Math.random() * 4) + "s";
+    document.body.appendChild(b);
 }
 </script>
 
